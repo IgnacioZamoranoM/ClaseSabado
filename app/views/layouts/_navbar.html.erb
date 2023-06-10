@@ -11,6 +11,9 @@
 
           <%= link_to 'home' , root_path, class: 'nav-link active'%>
         </li>  
+        <%if user_signed_in? %>
+          <%= button_to 'Salir', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        <%end %>
         </li>
       </ul>
       <form class="d-flex">
